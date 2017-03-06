@@ -95,12 +95,16 @@ public class Puzzle {
 	public static void main(String[] args) {
 		int[][] initial = { {1, 8, 2}, {0, 4, 3}, {7, 6, 5} };
 		int[][] goal    = { {1, 2, 3}, {4, 5, 6}, {7, 8, 0} };
+		
+		// White tile coordinate
 		int x = 1, y = 0;
+		
 		Puzzle puzzle = new Puzzle();
 		if (puzzle.isSolvable(initial)) {
-			new Puzzle().solve(initial, goal, x, y);
-		} else {
-			System.out.println("Are you kidding me? The given initial is impossible to solve.");
+			puzzle.solve(initial, goal, x, y);
+		} 
+		else {
+			System.out.println("The given initial is impossible to solve");
 		}
 	}
 
