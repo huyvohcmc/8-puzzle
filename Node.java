@@ -18,10 +18,12 @@ public class Node {
 		for (int i = 0; i < matrix.length; i++) {
 			this.matrix[i] = matrix[i].clone();
 		}
+		
 		// Swap value
 		this.matrix[x][y]       = this.matrix[x][y] + this.matrix[newX][newY];
 		this.matrix[newX][newY] = this.matrix[x][y] - this.matrix[newX][newY];
 		this.matrix[x][y]       = this.matrix[x][y] - this.matrix[newX][newY];
+		
 		this.cost = Integer.MAX_VALUE;
 		this.level = level;
 		this.x = newX;
